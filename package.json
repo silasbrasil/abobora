@@ -1,0 +1,24 @@
+{
+  "name": "abobora",
+  "version": "0.1.0",
+  "description": "A tool to get analytics events data easily using BigQuery",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "ts-node ./src/index.ts"
+  },
+  "keywords": [],
+  "author": "Marx Souza <marxsouza@niduu.com>",
+  "license": {
+    "type": "GPL-3.0",
+    "url": "https://www.gnu.org/licenses/gpl-3.0.en.html"
+  },
+  "devDependencies": {
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@google-cloud/bigquery": "^4.7.0"
+  }
+}

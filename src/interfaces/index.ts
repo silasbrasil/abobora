@@ -1,1 +1,2 @@
-export * from "./Abobora";
+export * from "./AboboraInterface";
+export * from "./ReadInterface";

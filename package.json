@@ -1,21 +1,36 @@
 {
   "name": "abobora",
-  "version": "0.1.0",
-  "description": "A tool to get analytics events data easily using BigQuery",
+  "version": "0.11.0",
+  "description": "A tool to get BigQuery data easily",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "ts-node ./src/index.ts"
+    "lint": "tslint --project .",
+    "test": "mocha",
+    "tests": "nyc --reporter=html --reporter=text --timeout=3000 npm test"
   },
-  "keywords": [],
-  "author": "Marx Souza <marxsouza@niduu.com>",
+  "keywords": [
+    "bigquery",
+    "orm",
+    "query",
+    "database",
+    "db",
+    "google"
+  ],
+  "author": "Marx Souza <marxsouza@protonmail.com>",
   "license": {
     "type": "GPL-3.0",
-    "url": "https://www.gnu.org/licenses/gpl-3.0.en.html"
+    "url": "https://www.gnu.org/licenses/gpl-3m0.en.html"
   },
   "devDependencies": {
+    "@types/chai": "^4.2.10",
+    "@types/mocha": "^7.0.2",
+    "chai": "^4.2.0",
+    "mocha": "^7.1.0",
+    "nyc": "^15.0.0",
     "ts-node": "^8.6.2",
+    "tslint": "^6.0.0",
     "typescript": "^3.8.3"
   },
   "dependencies": {

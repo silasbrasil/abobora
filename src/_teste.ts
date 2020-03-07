@@ -1,6 +1,16 @@
 import {Abobora} from "./Abobora";
+
 const abobora = new Abobora("analytics_222891935.*");
-abobora.read().limit(1).fields('user_id').filter({"user_id": null}).execute().then(res => console.log(res));
+
+abobora
+  .read()
+  .fields('user_id')
+  .filter({"user_id": null})
+  .unnest({"event_params": "param"})
+  .limit(1)
+  .execute()
+  .then(res => console.log(res));
+
 console.log(abobora.query);
 
 // abobora.read().fields(fields)  		-> SELECT fields FROM `example-dataset` [GROUP BY groupable_fields];

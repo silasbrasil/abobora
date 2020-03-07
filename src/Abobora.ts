@@ -6,11 +6,10 @@ import { AboboraInterface, ReadInterface } from "./interfaces";
 export class Abobora implements AboboraInterface {
   public dataset: string;
   public query: string = "";
-  public client: BigQuery;
+  public client: BigQuery = new BigQuery();
 
   constructor (dataset: string) {
     this.dataset = dataset;
-    this.client = new BigQuery();
   }
 
   private get _querySplited(): string[] {
@@ -84,9 +83,9 @@ export class Abobora implements AboboraInterface {
    * @return this  A Wrapper for abobora with unnested fields in BigQuery SQL query.
    */
   unnest(fields: {[key: string]: any}): Abobora {
+    // TODO
     return this;
   }
-
 
   /**
    * @description A simple method to execute query in BigQuery using client property.
